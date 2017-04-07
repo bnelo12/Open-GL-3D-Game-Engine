@@ -13,7 +13,7 @@
 
 class DirectionalLight: public Light {
 public:
-    DirectionalLight(vec3 intensities, vec3 Direction);
+    DirectionalLight(vec3 direction, vec3 diffuse, vec3 specular, vec3 ambient);
 private:
     vec3 direction;
 };

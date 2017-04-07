@@ -8,7 +8,7 @@
 
 #include "DirectionalLight.hpp"
 
-DirectionalLight::DirectionalLight(vec3 intensities, vec3 direction): Light(intensities) {
+DirectionalLight::DirectionalLight(vec3 direction, vec3 diffuse, vec3 specular, vec3 ambient): Light(diffuse, specular, ambient) {
     this->direction = direction;
 }
 

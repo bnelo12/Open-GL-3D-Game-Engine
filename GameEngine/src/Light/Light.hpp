@@ -21,19 +21,19 @@ using namespace glm;
 
 class Light {
 public:
-    Light(vec3 position, vec3 intensities);
+    Light(vec3 position, vec3 diffuse, vec3 specular, vec3 ambient);
     void render();
     void rotateAround(float angle, vec3 axis, vec3 point);
-    static void setAmbient(float ambient);
 protected:
-    Light(vec3 intensities);
+    Light(vec3 diffuse, vec3 specular, vec3 ambient);
 private:
     Sphere* mesh;
     vec3 position;
     mat4 rotation = mat4();
-    vec3 intensities;
+    vec3 diffuse;
+    vec3 specular;
+    vec3 ambient;
     void update();
-    static float ambient;
 };
 
 

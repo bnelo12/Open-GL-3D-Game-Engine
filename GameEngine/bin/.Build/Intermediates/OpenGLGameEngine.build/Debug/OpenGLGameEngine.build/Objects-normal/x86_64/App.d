@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/App/App.cpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/App/App.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/App/App.cpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/App/App.hpp \
   /usr/local/include/GL/glew.h /usr/local/include/SDL2/SDL.h \
   /usr/local/include/SDL2/SDL_main.h \
   /usr/local/include/SDL2/SDL_stdinc.h \
@@ -140,17 +140,17 @@ dependencies: \
   /usr/local/include/glm/gtc/quaternion.inl \
   /usr/local/include/glm/gtc/quaternion_simd.inl \
   /usr/local/include/glm/gtc/type_ptr.inl \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Program/Shader.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Program/Program.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Texture/Texture.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Camera/FPSCamera.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Cube.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Primitive.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Material/Material.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Program/Shader.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Program/Program.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Texture/Texture.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Camera/FPSCamera.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Cube.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Primitive.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Material/Material.hpp \
   /usr/local/include/glm/gtx/quaternion.hpp \
   /usr/local/include/glm/gtx/../gtx/norm.hpp \
   /usr/local/include/glm/gtx/norm.inl \
   /usr/local/include/glm/gtx/quaternion.inl \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Sphere.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Light/Light.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Plane.hpp
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Sphere.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Light/Light.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Plane.hpp
