@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Texture/Texture.cpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Texture/Texture.cpp \
   /usr/local/include/GL/glew.h /usr/local/include/SDL2/SDL.h \
   /usr/local/include/SDL2/SDL_main.h \
   /usr/local/include/SDL2/SDL_stdinc.h \
@@ -43,4 +43,4 @@ dependencies: \
   /usr/local/include/SDL2/SDL_timer.h \
   /usr/local/include/SDL2/SDL_version.h \
   /usr/local/include/SDL2/SDL_image.h \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Texture/Texture.hpp
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Texture/Texture.hpp

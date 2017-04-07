@@ -1,10 +1,10 @@
 dependencies: \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Cube.cpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Cube.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Primitive.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Cube.cpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Cube.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Primitive.hpp \
   /usr/local/include/GL/glew.h \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Texture/Texture.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Material/Material.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Texture/Texture.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Material/Material.hpp \
   /usr/local/include/glm/glm.hpp \
   /usr/local/include/glm/detail/_fixes.hpp \
   /usr/local/include/glm/fwd.hpp \
@@ -98,8 +98,8 @@ dependencies: \
   /usr/local/include/glm/gtc/../gtc/constants.hpp \
   /usr/local/include/glm/gtc/constants.inl \
   /usr/local/include/glm/gtc/matrix_transform.inl \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Program/Program.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Program/Shader.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Program/Program.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Program/Shader.hpp \
   /usr/local/include/glm/gtx/quaternion.hpp \
   /usr/local/include/glm/gtx/../gtc/quaternion.hpp \
   /usr/local/include/glm/gtc/quaternion.inl \

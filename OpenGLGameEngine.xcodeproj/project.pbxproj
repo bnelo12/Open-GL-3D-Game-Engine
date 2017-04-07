@@ -22,6 +22,7 @@
 		B52E51721E7B4376004538AD /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B52E51701E7B4376004538AD /* Shader.cpp */; };
 		B52E517A1E7B734A004538AD /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B52E51781E7B734A004538AD /* Program.cpp */; };
 		B55FABDE1E96A816005DBFB3 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B52E517D1E7B81F0004538AD /* Texture.cpp */; };
+		B57F26BF1E979A6A00CD9FD1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B57F26BE1E979A6A00CD9FD1 /* README.md */; };
 		B58466841E891E2D00D789EA /* wooden-crate.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = B58466831E891E0D00D789EA /* wooden-crate.jpg */; };
 		B58466871E891E7900D789EA /* FPSCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B58466851E891E7900D789EA /* FPSCamera.cpp */; };
 		B597313E1E8EFF7200FE2B6D /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B597313C1E8EFF7200FE2B6D /* App.cpp */; };
@@ -80,6 +81,7 @@
 		B52E51791E7B734A004538AD /* Program.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Program.hpp; sourceTree = "<group>"; };
 		B52E517D1E7B81F0004538AD /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
 		B52E517E1E7B81F0004538AD /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
+		B57F26BE1E979A6A00CD9FD1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B58466831E891E0D00D789EA /* wooden-crate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wooden-crate.jpg"; sourceTree = "<group>"; };
 		B58466851E891E7900D789EA /* FPSCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FPSCamera.cpp; sourceTree = "<group>"; };
 		B58466861E891E7900D789EA /* FPSCamera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FPSCamera.hpp; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		B52E51401E7B11B6004538AD = {
 			isa = PBXGroup;
 			children = (
+				B57F26BE1E979A6A00CD9FD1 /* README.md */,
 				B52E514B1E7B11B6004538AD /* GameEngine */,
 				B52E514A1E7B11B6004538AD /* Products */,
 				B52E51531E7B16A8004538AD /* Frameworks */,
@@ -367,6 +370,7 @@
 				B52E51721E7B4376004538AD /* Shader.cpp in Sources */,
 				B52E516D1E7B42A7004538AD /* main.cpp in Sources */,
 				B58466871E891E7900D789EA /* FPSCamera.cpp in Sources */,
+				B57F26BF1E979A6A00CD9FD1 /* README.md in Sources */,
 				B59731491E8F1F6200FE2B6D /* Primitive.cpp in Sources */,
 				B597313E1E8EFF7200FE2B6D /* App.cpp in Sources */,
 				B508781D1E93D00D00720C7A /* DirectionalLight.cpp in Sources */,

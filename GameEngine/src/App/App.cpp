@@ -43,12 +43,12 @@ void App::load() {
     cube2 = new Cube(Material::EMERALD);
     cube2->setTranslation(glm::vec3(-2, 3, -1));
     cube2->setRotation(vec3(45,45,0));
-    sphere1 = new Sphere(Material::OBSIDIAN,20);
+    sphere1 = new Sphere(Material::RUBY, 20);
     cube3 = new Cube(Material::GOLD);
     cube3->setTranslation(vec3(3,3,3));
     cube3->setRotation(vec3(45,30,70));
-    light1 = new Light(vec3(-4,0,0), vec3(1,1,1));
-    plane1 = new Plane(Material::WHITE_RUBBER);
+    light1 = new Light(vec3(-4,0,0), vec3(.5,.5,.5), vec3(1.f,1.f,1.f), vec3(.2,.2,.2));
+    plane1 = new Plane(Material::YELLOW_PLASTIC);
     plane1->setTranslation(vec3(0,-2,0));
     plane1->setScale(100);
 }

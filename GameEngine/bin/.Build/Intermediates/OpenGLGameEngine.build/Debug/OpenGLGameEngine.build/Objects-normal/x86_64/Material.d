@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Material/Material.cpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Material/Material.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Material/Material.cpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Material/Material.hpp \
   /usr/local/include/glm/glm.hpp \
   /usr/local/include/glm/detail/_fixes.hpp \
   /usr/local/include/glm/fwd.hpp \

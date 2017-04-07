@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Camera/FPSCamera.cpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Camera/FPSCamera.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Camera/FPSCamera.cpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Camera/FPSCamera.hpp \
   /usr/local/include/SDL2/SDL.h /usr/local/include/SDL2/SDL_main.h \
   /usr/local/include/SDL2/SDL_stdinc.h \
   /usr/local/include/SDL2/SDL_config.h \
@@ -140,5 +140,5 @@ dependencies: \
   /usr/local/include/glm/gtc/quaternion.inl \
   /usr/local/include/glm/gtc/quaternion_simd.inl \
   /usr/local/include/glm/gtc/type_ptr.inl \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Program/Program.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Program/Shader.hpp
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Program/Program.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Program/Shader.hpp

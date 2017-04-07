@@ -1,7 +1,7 @@
 dependencies: \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Light/DirectionalLight.cpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Light/DirectionalLight.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Light/Light.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Light/DirectionalLight.cpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Light/DirectionalLight.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Light/Light.hpp \
   /usr/local/include/GL/glew.h /usr/local/include/glm/glm.hpp \
   /usr/local/include/glm/detail/_fixes.hpp \
   /usr/local/include/glm/fwd.hpp \
@@ -100,12 +100,12 @@ dependencies: \
   /usr/local/include/glm/gtc/quaternion.inl \
   /usr/local/include/glm/gtc/quaternion_simd.inl \
   /usr/local/include/glm/gtc/type_ptr.inl \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Sphere.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Primitive.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Texture/Texture.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Material/Material.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Program/Program.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Program/Shader.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Sphere.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Primitive.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Texture/Texture.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Material/Material.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Program/Program.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Program/Shader.hpp \
   /usr/local/include/glm/gtx/quaternion.hpp \
   /usr/local/include/glm/gtx/../gtx/norm.hpp \
   /usr/local/include/glm/gtx/norm.inl \

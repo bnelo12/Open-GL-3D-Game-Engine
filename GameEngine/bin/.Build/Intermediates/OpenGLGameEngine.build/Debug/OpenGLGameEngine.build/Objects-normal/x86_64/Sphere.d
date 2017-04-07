@@ -1,14 +1,14 @@
 dependencies: \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Sphere.cpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Sphere.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Sphere.cpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Sphere.hpp \
   /usr/local/include/glm/gtc/constants.hpp \
   /usr/local/include/glm/gtc/../detail/setup.hpp \
   /usr/local/include/glm/gtc/../detail/../simd/platform.h \
   /usr/local/include/glm/gtc/constants.inl \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Primitives/Primitive.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Primitives/Primitive.hpp \
   /usr/local/include/GL/glew.h \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Texture/Texture.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Material/Material.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Texture/Texture.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Material/Material.hpp \
   /usr/local/include/glm/glm.hpp \
   /usr/local/include/glm/detail/_fixes.hpp \
   /usr/local/include/glm/fwd.hpp \
@@ -99,8 +99,8 @@ dependencies: \
   /usr/local/include/glm/gtc/../detail/../simd/integer.h \
   /usr/local/include/glm/gtc/matrix_transform.hpp \
   /usr/local/include/glm/gtc/matrix_transform.inl \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Program/Program.hpp \
-  /Users/Ben/Documents/Xcode/OpenGLGameEngine/GameEngine/src/Program/Shader.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Program/Program.hpp \
+  /Users/Ben/Documents/Xcode/OpenGL/Open-GL-3D-Game-Engine/GameEngine/src/Program/Shader.hpp \
   /usr/local/include/glm/gtx/quaternion.hpp \
   /usr/local/include/glm/gtx/../gtc/quaternion.hpp \
   /usr/local/include/glm/gtc/quaternion.inl \
