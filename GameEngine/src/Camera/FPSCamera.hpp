@@ -34,6 +34,8 @@ public:
     void setFarPlane(float farPlane) {this->farPlane = farPlane;};
     void setNearPlane(float nearPlane) {this->nearPlane = nearPlane;};
     
+    void lockCamera(bool lock);
+    
 private:
     //player properties
     float speed = 0.2f;
@@ -57,6 +59,8 @@ private:
     vec3 forward();
     vec3 right();
     vec3 offset;
+    
+    bool locked = false;
     
     SDL_Window* window;
     Program* gProgram;

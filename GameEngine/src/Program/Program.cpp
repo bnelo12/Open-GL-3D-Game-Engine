@@ -11,6 +11,7 @@
 //PreDefined Programs
 GLuint Program::FLAT;
 GLuint Program::PHONG;
+GLuint Program::LIGHTING_MAP;
 
 Program::Program() {
 }
@@ -28,6 +29,10 @@ void Program::init() {
     Shader phongV = Shader("phongV.glsl", GL_VERTEX_SHADER);
     Shader phongF = Shader("phongF.glsl", GL_FRAGMENT_SHADER);
     Program::PHONG = (new Program({&phongF, &phongV}))->programid;
+    
+    Shader lightingMapV = Shader("lightingMapV.glsl", GL_VERTEX_SHADER);
+    Shader lightingMapF = Shader("lightingMapF.glsl", GL_FRAGMENT_SHADER);
+    Program::LIGHTING_MAP = (new Program({&lightingMapF, &lightingMapV}))->programid;
 }
 
 void Program::addShader(Shader *shader) {

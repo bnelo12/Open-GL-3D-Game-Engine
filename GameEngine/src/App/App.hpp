@@ -18,6 +18,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <glm/gtx/color_space.hpp>
 
 #include "Shader.hpp"
 #include "Program.hpp"
@@ -45,13 +46,8 @@ private:
     static void render();
     static void update();
     
-    //GLPrograms
-    static Program* flatShading;
-    
     //World Objects
     static FPSCamera fpsCamera;
-    static Cube* cube1;
-    static Cube* cube2;
 };
 
 #endif /* App_hpp */

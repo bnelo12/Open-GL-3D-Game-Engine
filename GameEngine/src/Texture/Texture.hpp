@@ -13,10 +13,15 @@
 
 #include <GL/glew.h>
 
+enum class MAP {DIFFUSE, SPECULAR, EMISSION};
+
 class Texture {
 public:
-    Texture(const char* filename);
+    Texture(const char* filename, MAP type);
     GLuint textureid;
+    MAP type;
+private:
+    GLuint textureUnit = 0;
 };
 
 #endif /* Texture_hpp */

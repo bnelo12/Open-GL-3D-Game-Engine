@@ -16,13 +16,17 @@ SDL_GLContext App::mainContext;
 
 //World Objects
 FPSCamera App::fpsCamera = FPSCamera(glm::vec3(0,0,-5), 0, 0);
-Cube* App::cube1;
-Cube* App::cube2;
+Cube* cube1;
+Cube* cube2;
 Cube* cube3;
+Cube* cube4;
 Light* light1;
 Sphere* sphere1;
 Plane* plane1;
 float lightRot = 0;
+float cubeRotation = 0;
+
+float hue = 0;
 
 void App::setOpenGLAttributes() {
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
@@ -40,15 +44,17 @@ void App::loadShaders() {
 void App::load() {
     fpsCamera.setWindow(mainWindow);
     fpsCamera.setAspectRatio(1280.f/720.f);
-    cube2 = new Cube(Material::EMERALD);
+    cube1 = new Cube(vector<Texture*>{new Texture("cube_diffuse.jpg", MAP::DIFFUSE), new Texture("cube_diffuse.jpg", MAP::SPECULAR),new Texture("cube_emission.png", MAP::EMISSION)});
+    cube2 = new Cube(vector<Texture*>{new Texture("cube_diffuse.jpg", MAP::DIFFUSE), new Texture("cube_diffuse.jpg", MAP::SPECULAR),new Texture("cube_emission.png", MAP::EMISSION)});
     cube2->setTranslation(glm::vec3(-2, 3, -1));
     cube2->setRotation(vec3(45,45,0));
     sphere1 = new Sphere(Material::RUBY, 20);
-    cube3 = new Cube(Material::GOLD);
+    cube4 = new Cube(vector<Texture*>{new Texture("cube_diffuse.jpg", MAP::DIFFUSE), new Texture("cube_diffuse.jpg", MAP::SPECULAR),new Texture("cube_emission.png", MAP::EMISSION)});
+    cube3 = new Cube(vector<Texture*>{new Texture("cube_diffuse.jpg", MAP::DIFFUSE), new Texture("cube_diffuse.jpg", MAP::SPECULAR),new Texture("cube_emission.png", MAP::EMISSION)});
     cube3->setTranslation(vec3(3,3,3));
     cube3->setRotation(vec3(45,30,70));
-    light1 = new Light(vec3(-4,0,0), vec3(.5,.5,.5), vec3(1.f,1.f,1.f), vec3(.2,.2,.2));
-    plane1 = new Plane(Material::YELLOW_PLASTIC);
+    light1 = new Light(vec3(-4,0,0), vec3(1,1,1), vec3(1.f,1.f,1.f), vec3(.2,.2,.2));
+    plane1 = new Plane(Material::WHITE_RUBBER);
     plane1->setTranslation(vec3(0,-2,0));
     plane1->setScale(100);
 }
@@ -57,7 +63,7 @@ void App::render() {
     glClearColor(0, 0, 0, 1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     cube2->render();
-    sphere1->render();
+    cube1->render();
     cube3->render();
     light1->render();
     plane1->render();
@@ -66,6 +72,20 @@ void App::render() {
 
 void App::update() {
     fpsCamera.updateCamera();
+    if (hue < 360) {
+        hue+=3;
+        cubeRotation += .1;
+    }
+    else {
+        hue = 0;
+    }
+    light1->setDiffuse(rgbColor(vec3(hue, 1, 1)));
+    cube1->emissionMapColour =  rgbColor(vec3(hue, 1, 1));
+    cube2->emissionMapColour =  rgbColor(vec3(hue, 1, 1));
+    cube3->emissionMapColour =  rgbColor(vec3(hue, 1, 1));
+    cube4->emissionMapColour =  rgbColor(vec3(hue, 1, 1));
+    cube2->setRotation(vec3(0,cubeRotation,30));
+    cube3->setRotation(vec3(30,0,cubeRotation));
     light1->rotateAround(lightRot, vec3(0,1,0), vec3(0,0,0));
     lightRot+=1;
 }
@@ -124,6 +144,8 @@ void App::main() {
                     case SDLK_ESCAPE:
                         loop = false;
                         break;
+                    case SDLK_l:
+                        fpsCamera.lockCamera(true);
                     default:
                         break;
                 }
@@ -132,4 +154,5 @@ void App::main() {
         render();
         update();
     }
+    
 }

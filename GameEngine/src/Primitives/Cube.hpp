@@ -16,6 +16,8 @@ using namespace glm;
 class Cube: public Primitive {
 public:
     Cube(char* textureFile, Material material);
+    Cube(char* diffuseMap, char* specularMap);
+    Cube(std::vector<Texture*> lightingMaps);
     Cube(Material material);
     Cube(vec4 colour);
 private:

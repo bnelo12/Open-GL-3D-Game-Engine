@@ -13,7 +13,7 @@
 
 #include "Texture.hpp"
 
-Texture::Texture(const char* filename) {
+Texture::Texture(const char* filename, MAP type) {
     SDL_Surface* textureImage;
     textureImage = IMG_Load(filename);
     glGenTextures(1, &textureid);
@@ -38,4 +38,6 @@ Texture::Texture(const char* filename) {
     glGenerateMipmap(GL_TEXTURE_2D);
     
     glBindTexture(GL_TEXTURE_2D, 0);
+    
+    this->type = type;
 }
