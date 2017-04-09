@@ -32,6 +32,14 @@
 		B59731501E8F267C00FE2B6D /* flatF.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = B597314E1E8F21D400FE2B6D /* flatF.glsl */; };
 		B597315B1E917C7700FE2B6D /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B597315A1E917C7700FE2B6D /* Light.cpp */; };
 		B59731601E92A7E300FE2B6D /* Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B597315E1E92A7E300FE2B6D /* Plane.cpp */; };
+		B5ABC4EC1E9A7CBD0044E0BC /* lightingMapF.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ABC4EA1E9A7C990044E0BC /* lightingMapF.glsl */; };
+		B5ABC4ED1E9A7CBD0044E0BC /* lightingMapV.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ABC4EB1E9A7C990044E0BC /* lightingMapV.glsl */; };
+		B5ABC4F41E9A7CE70044E0BC /* container_emission.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ABC4EE1E9A7CDD0044E0BC /* container_emission.jpg */; };
+		B5ABC4F51E9A7CE70044E0BC /* container_specular_color.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ABC4EF1E9A7CDD0044E0BC /* container_specular_color.png */; };
+		B5ABC4F61E9A7CE70044E0BC /* container_specular.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ABC4F01E9A7CDD0044E0BC /* container_specular.png */; };
+		B5ABC4F71E9A7CE70044E0BC /* container.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ABC4F11E9A7CDD0044E0BC /* container.png */; };
+		B5ABC4F81E9A7CE70044E0BC /* cube_diffuse.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ABC4F21E9A7CDD0044E0BC /* cube_diffuse.jpg */; };
+		B5ABC4F91E9A7CE70044E0BC /* cube_emission.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ABC4F31E9A7CDD0044E0BC /* cube_emission.png */; };
 		B5DC27E91E89365D0013C779 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5DC27E71E89365D0013C779 /* Cube.cpp */; };
 		B5E0733E1E96A626003B2AFD /* phongF.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5E0733C1E96A5EF003B2AFD /* phongF.glsl */; };
 		B5E0733F1E96A626003B2AFD /* phongV.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5E0733D1E96A5EF003B2AFD /* phongV.glsl */; };
@@ -44,6 +52,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				B5ABC4F41E9A7CE70044E0BC /* container_emission.jpg in CopyFiles */,
+				B5ABC4F51E9A7CE70044E0BC /* container_specular_color.png in CopyFiles */,
+				B5ABC4F61E9A7CE70044E0BC /* container_specular.png in CopyFiles */,
+				B5ABC4F71E9A7CE70044E0BC /* container.png in CopyFiles */,
+				B5ABC4F81E9A7CE70044E0BC /* cube_diffuse.jpg in CopyFiles */,
+				B5ABC4F91E9A7CE70044E0BC /* cube_emission.png in CopyFiles */,
+				B5ABC4EC1E9A7CBD0044E0BC /* lightingMapF.glsl in CopyFiles */,
+				B5ABC4ED1E9A7CBD0044E0BC /* lightingMapV.glsl in CopyFiles */,
 				B5E0733E1E96A626003B2AFD /* phongF.glsl in CopyFiles */,
 				B5E0733F1E96A626003B2AFD /* phongV.glsl in CopyFiles */,
 				B597314F1E8F267C00FE2B6D /* flatV.glsl in CopyFiles */,
@@ -99,6 +115,14 @@
 		B597315F1E92A7E300FE2B6D /* Plane.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Plane.hpp; sourceTree = "<group>"; };
 		B59731621E92CEEF00FE2B6D /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 		B59731631E92CEF800FE2B6D /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		B5ABC4EA1E9A7C990044E0BC /* lightingMapF.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lightingMapF.glsl; sourceTree = "<group>"; };
+		B5ABC4EB1E9A7C990044E0BC /* lightingMapV.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lightingMapV.glsl; sourceTree = "<group>"; };
+		B5ABC4EE1E9A7CDD0044E0BC /* container_emission.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container_emission.jpg; sourceTree = "<group>"; };
+		B5ABC4EF1E9A7CDD0044E0BC /* container_specular_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container_specular_color.png; sourceTree = "<group>"; };
+		B5ABC4F01E9A7CDD0044E0BC /* container_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container_specular.png; sourceTree = "<group>"; };
+		B5ABC4F11E9A7CDD0044E0BC /* container.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container.png; sourceTree = "<group>"; };
+		B5ABC4F21E9A7CDD0044E0BC /* cube_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_diffuse.jpg; sourceTree = "<group>"; };
+		B5ABC4F31E9A7CDD0044E0BC /* cube_emission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube_emission.png; sourceTree = "<group>"; };
 		B5DC27E71E89365D0013C779 /* Cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
 		B5DC27E81E89365D0013C779 /* Cube.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cube.hpp; sourceTree = "<group>"; };
 		B5E0733C1E96A5EF003B2AFD /* phongF.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = phongF.glsl; sourceTree = "<group>"; };
@@ -135,6 +159,12 @@
 		B51BC67E1E7C01B700ACDA09 /* textures */ = {
 			isa = PBXGroup;
 			children = (
+				B5ABC4EE1E9A7CDD0044E0BC /* container_emission.jpg */,
+				B5ABC4EF1E9A7CDD0044E0BC /* container_specular_color.png */,
+				B5ABC4F01E9A7CDD0044E0BC /* container_specular.png */,
+				B5ABC4F11E9A7CDD0044E0BC /* container.png */,
+				B5ABC4F21E9A7CDD0044E0BC /* cube_diffuse.jpg */,
+				B5ABC4F31E9A7CDD0044E0BC /* cube_emission.png */,
 				B51BC68B1E7C204C00ACDA09 /* hazard.png */,
 				B58466831E891E0D00D789EA /* wooden-crate.jpg */,
 				B51BC67F1E7C02D600ACDA09 /* warning_sign.png */,
@@ -215,6 +245,7 @@
 		B52E516F1E7B4309004538AD /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				B5ABC4E91E9A7C860044E0BC /* lightingMap */,
 				B59731551E916EB500FE2B6D /* phong */,
 				B59731521E8FDAFD00FE2B6D /* flat */,
 			);
@@ -277,6 +308,15 @@
 				B59731631E92CEF800FE2B6D /* Model.h */,
 			);
 			name = Mesh;
+			sourceTree = "<group>";
+		};
+		B5ABC4E91E9A7C860044E0BC /* lightingMap */ = {
+			isa = PBXGroup;
+			children = (
+				B5ABC4EA1E9A7C990044E0BC /* lightingMapF.glsl */,
+				B5ABC4EB1E9A7C990044E0BC /* lightingMapV.glsl */,
+			);
+			name = lightingMap;
 			sourceTree = "<group>";
 		};
 		B5DC27E41E8930960013C779 /* Camera */ = {
