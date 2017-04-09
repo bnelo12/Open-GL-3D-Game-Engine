@@ -36,6 +36,10 @@ public:
     mat4 scaleMatrix = mat4();
     
     bool SHADING_ENABLED = true;
+    
+    //Colours
+    vec3 emissionMapColour = vec3(1,1,1);
+    void setColour(vec4 colour);
 protected:
     void init();
     
@@ -43,6 +47,11 @@ protected:
     GLuint VAO = 0;
     std::vector<GLfloat> vertexData;
     Texture* texture = NULL;
+    
+    Texture* diffuseMap = NULL;
+    Texture* specularMap = NULL;
+    Texture* emissionMap = NULL;
+    
     Material* material = NULL;
     vec4* colour = NULL;
     
@@ -51,7 +60,13 @@ protected:
     quat rotation = quat(vec3(0 ,0 ,0));
     float scale = 1;
     
-    bool hasDiffuseTextureMap = false;
+    bool hasTexture = false;
+    bool hasTextureMaps = false;
+    
+private:
+    bool hasDiffuseMap = false;
+    bool hasSpecularMap = false;
+    bool hasEmissionMap = false;
 };
 
 #endif /* Primitive_hpp */

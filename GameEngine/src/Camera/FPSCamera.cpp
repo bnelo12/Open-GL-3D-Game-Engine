@@ -34,32 +34,42 @@ void FPSCamera::offsetPosition(vec3 offset) {
 }
 
 void FPSCamera::updateCamera() {
-    int mouseX, mouseY;
-    SDL_GetMouseState(&mouseX, &mouseY);
-    this->offestOrientation(sensitivity*(mouseY-height/2), sensitivity*(mouseX-width/2));
-    SDL_WarpMouseInWindow(window, width/2, height/2);
-
     const Uint8* ks = SDL_GetKeyboardState(NULL);
-    if(ks[SDL_SCANCODE_W]) offsetPosition(-speed*forward());
-    if(ks[SDL_SCANCODE_S]) offsetPosition(speed*forward());
-    if(ks[SDL_SCANCODE_D]) offsetPosition(-speed*right());
-    if(ks[SDL_SCANCODE_A]) offsetPosition(speed*right());
-    
-    projectionMat = perspective(radians(FOV), aspectRatio, nearPlane, farPlane);
-    glm::mat4 finalVal = calculate();
-    GLuint cameraUniform = 0;
-    
-    glUseProgram(Program::FLAT);
-    cameraUniform = glGetUniformLocation(Program::FLAT, "camera");
-    glUniformMatrix4fv(cameraUniform, 1, false, glm::value_ptr(finalVal));
-    glUseProgram(0);
-    
-    glUseProgram(Program::PHONG);
-    cameraUniform = glGetUniformLocation(Program::PHONG, "camera");
-    glUniformMatrix4fv(cameraUniform, 1, false, glm::value_ptr(finalVal));
-    GLuint cameraPosUniform = glGetUniformLocation(Program::PHONG, "cameraPos");
-    glUniform3fv(cameraPosUniform, 1, glm::value_ptr(-this->offset));
-    glUseProgram(0);
+    if (!locked) {
+        int mouseX, mouseY;
+        SDL_GetMouseState(&mouseX, &mouseY);
+        this->offestOrientation(sensitivity*(mouseY-height/2), sensitivity*(mouseX-width/2));
+        SDL_WarpMouseInWindow(window, width/2, height/2);
+
+        if(ks[SDL_SCANCODE_W]) offsetPosition(-speed*forward());
+        if(ks[SDL_SCANCODE_S]) offsetPosition(speed*forward());
+        if(ks[SDL_SCANCODE_D]) offsetPosition(-speed*right());
+        if(ks[SDL_SCANCODE_A]) offsetPosition(speed*right());
+        
+        projectionMat = perspective(radians(FOV), aspectRatio, nearPlane, farPlane);
+        glm::mat4 finalVal = calculate();
+        GLuint cameraUniform = 0;
+        GLuint cameraPosUniform = 0;
+        
+        glUseProgram(Program::FLAT);
+        cameraUniform = glGetUniformLocation(Program::FLAT, "camera");
+        glUniformMatrix4fv(cameraUniform, 1, false, glm::value_ptr(finalVal));
+        glUseProgram(0);
+        
+        glUseProgram(Program::PHONG);
+        cameraUniform = glGetUniformLocation(Program::PHONG, "camera");
+        glUniformMatrix4fv(cameraUniform, 1, false, glm::value_ptr(finalVal));
+        cameraPosUniform = glGetUniformLocation(Program::PHONG, "cameraPos");
+        glUniform3fv(cameraPosUniform, 1, glm::value_ptr(-this->offset));
+        glUseProgram(0);
+        
+        glUseProgram(Program::LIGHTING_MAP);
+        cameraUniform = glGetUniformLocation(Program::LIGHTING_MAP, "camera");
+        glUniformMatrix4fv(cameraUniform, 1, false, glm::value_ptr(finalVal));
+        cameraPosUniform = glGetUniformLocation(Program::LIGHTING_MAP, "cameraPos");
+        glUniform3fv(cameraPosUniform, 1, glm::value_ptr(-this->offset));
+        glUseProgram(0);
+    }
 }
 
 vec3 FPSCamera::forward() {
@@ -79,4 +89,9 @@ mat4 FPSCamera::calculate() {
     orientation = rotate(orientation, radians(zRot), vec3(0,1,0));
     out = projectionMat*orientation*translation;
     return out;
+}
+
+void FPSCamera::lockCamera(bool lock) {
+    SDL_ShowCursor(SDL_ENABLE);
+    this->locked = lock;
 }

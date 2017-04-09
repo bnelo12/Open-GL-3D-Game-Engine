@@ -28,6 +28,7 @@ public:
     //Shader Programs
     static GLuint FLAT;
     static GLuint PHONG;
+    static GLuint LIGHTING_MAP;
     
 private:
     std::vector<Shader*> shaders;
