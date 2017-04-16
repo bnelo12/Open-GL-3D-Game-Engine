@@ -21,10 +21,12 @@
 		B52E516D1E7B42A7004538AD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B52E516C1E7B42A7004538AD /* main.cpp */; };
 		B52E51721E7B4376004538AD /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B52E51701E7B4376004538AD /* Shader.cpp */; };
 		B52E517A1E7B734A004538AD /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B52E51781E7B734A004538AD /* Program.cpp */; };
+		B53423DF1E9EA6870028BFDF /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B53423DD1E9EA6870028BFDF /* Model.cpp */; };
+		B53423E21E9EAA180028BFDF /* libassimp.3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B53423E01E9EA9F80028BFDF /* libassimp.3.3.1.dylib */; };
 		B55FABDE1E96A816005DBFB3 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B52E517D1E7B81F0004538AD /* Texture.cpp */; };
-		B57F26BF1E979A6A00CD9FD1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B57F26BE1E979A6A00CD9FD1 /* README.md */; };
 		B58466841E891E2D00D789EA /* wooden-crate.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = B58466831E891E0D00D789EA /* wooden-crate.jpg */; };
 		B58466871E891E7900D789EA /* FPSCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B58466851E891E7900D789EA /* FPSCamera.cpp */; };
+		B5932B6C1E9D378E00F69FAC /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5932B6A1E9D378E00F69FAC /* Mesh.cpp */; };
 		B597313E1E8EFF7200FE2B6D /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B597313C1E8EFF7200FE2B6D /* App.cpp */; };
 		B59731461E8F1F4900FE2B6D /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B59731441E8F1F4900FE2B6D /* Sphere.cpp */; };
 		B59731491E8F1F6200FE2B6D /* Primitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B59731471E8F1F6200FE2B6D /* Primitive.cpp */; };
@@ -97,10 +99,15 @@
 		B52E51791E7B734A004538AD /* Program.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Program.hpp; sourceTree = "<group>"; };
 		B52E517D1E7B81F0004538AD /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
 		B52E517E1E7B81F0004538AD /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
+		B53423DD1E9EA6870028BFDF /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
+		B53423DE1E9EA6870028BFDF /* Model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Model.hpp; sourceTree = "<group>"; };
+		B53423E01E9EA9F80028BFDF /* libassimp.3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.3.1.dylib; path = ../../../../../../../usr/local/Cellar/assimp/3.3.1/lib/libassimp.3.3.1.dylib; sourceTree = "<group>"; };
 		B57F26BE1E979A6A00CD9FD1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B58466831E891E0D00D789EA /* wooden-crate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wooden-crate.jpg"; sourceTree = "<group>"; };
 		B58466851E891E7900D789EA /* FPSCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FPSCamera.cpp; sourceTree = "<group>"; };
 		B58466861E891E7900D789EA /* FPSCamera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FPSCamera.hpp; sourceTree = "<group>"; };
+		B5932B6A1E9D378E00F69FAC /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
+		B5932B6B1E9D378E00F69FAC /* Mesh.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Mesh.hpp; sourceTree = "<group>"; };
 		B597313C1E8EFF7200FE2B6D /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		B597313D1E8EFF7200FE2B6D /* App.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = App.hpp; sourceTree = "<group>"; };
 		B59731421E8F1D6B00FE2B6D /* Light.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Light.hpp; sourceTree = "<group>"; };
@@ -113,8 +120,6 @@
 		B597315A1E917C7700FE2B6D /* Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
 		B597315E1E92A7E300FE2B6D /* Plane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plane.cpp; sourceTree = "<group>"; };
 		B597315F1E92A7E300FE2B6D /* Plane.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Plane.hpp; sourceTree = "<group>"; };
-		B59731621E92CEEF00FE2B6D /* Mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
-		B59731631E92CEF800FE2B6D /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		B5ABC4EA1E9A7C990044E0BC /* lightingMapF.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lightingMapF.glsl; sourceTree = "<group>"; };
 		B5ABC4EB1E9A7C990044E0BC /* lightingMapV.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lightingMapV.glsl; sourceTree = "<group>"; };
 		B5ABC4EE1E9A7CDD0044E0BC /* container_emission.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container_emission.jpg; sourceTree = "<group>"; };
@@ -134,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53423E21E9EAA180028BFDF /* libassimp.3.3.1.dylib in Frameworks */,
 				B51BC68A1E7C17F800ACDA09 /* libSDL2_image.a in Frameworks */,
 				B52E516B1E7B3B21004538AD /* libSDL2.a in Frameworks */,
 				B52E51641E7B203C004538AD /* libGLEW.a in Frameworks */,
@@ -212,6 +218,7 @@
 		B52E51531E7B16A8004538AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B53423E01E9EA9F80028BFDF /* libassimp.3.3.1.dylib */,
 				B51BC6861E7C16C100ACDA09 /* libSDL2_image.la */,
 				B51BC6841E7C16B100ACDA09 /* libSDL2_image-2.0.0.dylib */,
 				B51BC6811E7C0FF000ACDA09 /* libSDL2_image.a */,
@@ -304,8 +311,10 @@
 		B59731611E92CEDD00FE2B6D /* Mesh */ = {
 			isa = PBXGroup;
 			children = (
-				B59731621E92CEEF00FE2B6D /* Mesh.h */,
-				B59731631E92CEF800FE2B6D /* Model.h */,
+				B5932B6A1E9D378E00F69FAC /* Mesh.cpp */,
+				B5932B6B1E9D378E00F69FAC /* Mesh.hpp */,
+				B53423DD1E9EA6870028BFDF /* Model.cpp */,
+				B53423DE1E9EA6870028BFDF /* Model.hpp */,
 			);
 			name = Mesh;
 			sourceTree = "<group>";
@@ -409,8 +418,9 @@
 				B59731601E92A7E300FE2B6D /* Plane.cpp in Sources */,
 				B52E51721E7B4376004538AD /* Shader.cpp in Sources */,
 				B52E516D1E7B42A7004538AD /* main.cpp in Sources */,
+				B5932B6C1E9D378E00F69FAC /* Mesh.cpp in Sources */,
 				B58466871E891E7900D789EA /* FPSCamera.cpp in Sources */,
-				B57F26BF1E979A6A00CD9FD1 /* README.md in Sources */,
+				B53423DF1E9EA6870028BFDF /* Model.cpp in Sources */,
 				B59731491E8F1F6200FE2B6D /* Primitive.cpp in Sources */,
 				B597313E1E8EFF7200FE2B6D /* App.cpp in Sources */,
 				B508781D1E93D00D00720C7A /* DirectionalLight.cpp in Sources */,
@@ -523,6 +533,7 @@
 					/usr/local/Cellar/glew/2.0.0/lib,
 					/usr/local/Cellar/sdl2/2.0.5/lib,
 					/usr/local/lib,
+					/usr/local/Cellar/assimp/3.3.1/lib,
 				);
 				PRODUCT_NAME = game;
 				SYMROOT = "${PROJECT_DIR}/Game\\ Engine/bin";
@@ -545,6 +556,7 @@
 					/usr/local/Cellar/glew/2.0.0/lib,
 					/usr/local/Cellar/sdl2/2.0.5/lib,
 					/usr/local/lib,
+					/usr/local/Cellar/assimp/3.3.1/lib,
 				);
 				PRODUCT_NAME = game;
 				SYMROOT = "${PROJECT_DIR}/Game\\ Engine/bin";

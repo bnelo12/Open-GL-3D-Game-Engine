@@ -1,13 +1,13 @@
 //
-//  Primitive.hpp
-//  OpenGL2
+//  Mesh.hpp
+//  OpenGLGameEngine
 //
-//  Created by Benjamin Elo on 4/1/17.
+//  Created by Benjamin Elo on 4/11/17.
 //  Copyright © 2017 Elo Software. All rights reserved.
 //
 
-#ifndef Primitive_hpp
-#define Primitive_hpp
+#ifndef Mesh_hpp
+#define Mesh_hpp
 
 #include <GL/glew.h>
 
@@ -18,18 +18,27 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/quaternion.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <vector>
 
 using namespace glm;
 
-class Primitive {
+struct Vertex {
+    vec3 position;
+    vec3 normal;
+    vec2 uv;
+};
+
+class Mesh {
 public:
+    std::vector<Vertex> vertices;
+    std::vector<GLuint> indices;
+    Mesh(std::vector<Vertex> vertices, std::vector<GLuint> indices, std::vector<Texture*> textures);
     void render();
     void update();
     void setTranslation(vec3 translation);
     void setRotation(vec3 eulerAngles);
     void rotateAround(float angle, vec3 axis, vec3 point);
     void setScale(float scale);
-    
     mat4 rotationMatrix = mat4();
     mat4 translationMatrix = mat4();
     mat4 scaleMatrix = mat4();
@@ -38,13 +47,10 @@ public:
     
     //Colours
     vec3 emissionMapColour = vec3(1,1,1);
-    void setColour(vec4 colour);
-protected:
+
+private:
+    GLuint VBO, VAO, EBO;
     void init();
-    
-    GLuint VBO = 0;
-    GLuint VAO = 0;
-    std::vector<GLfloat> vertexData;
     Texture* texture = NULL;
     
     Texture* diffuseMap = NULL;
@@ -62,10 +68,10 @@ protected:
     bool hasTexture = false;
     bool hasTextureMaps = false;
     
-private:
     bool hasDiffuseMap = false;
     bool hasSpecularMap = false;
     bool hasEmissionMap = false;
+
 };
 
-#endif /* Primitive_hpp */
+#endif /* Mesh_hpp */

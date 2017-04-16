@@ -67,6 +67,7 @@ void Light::update() {
 void Light::setDiffuse(vec3 diffuse) {
     this->diffuse = diffuse;
     this->mesh->setColour(vec4(diffuse,1));
+    update();
 }
 
 void Light::setAmbient(vec3 ambient) {

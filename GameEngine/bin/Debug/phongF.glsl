@@ -56,5 +56,5 @@ void main() {
         fragColour = vec4(1,1,1,1);
     }
     
-    finalColor =  vec4((ambientCoefficient+diffuseCoefficient+specular), fragColour.a);
+    finalColor =  vec4((ambientCoefficient+diffuseCoefficient+specular), fragColour.a) * fragColour;
 }
