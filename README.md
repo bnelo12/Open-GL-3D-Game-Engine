@@ -22,7 +22,7 @@ sunflower = new Model(
     }
 );
 ```
-Withe the results below,
+With the results below,
 <img src="Examples/update3.png"/>
 The next improvements I will make with this is instancing, such that I can display multiple copies of the same object more efficiently.
 
