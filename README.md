@@ -12,7 +12,7 @@ GLEW
 
 ## Update 3
 ### Model Loading
-Model loading is now a feature. I am using th Assimp library so that models of different types can be loaded, including .3ds, .obj, and .max. The constructor for the model class takes in a 3d model file and a vector of different texture types. Right now the model loading can onlytake in models composed of one mesh, and that contain one of each type of texture. It works in the same way that the cube class below works, so for instance if I wanted to load in the sunflower object file I would use the constructor as such,
+Model loading is now a feature. I am using th Assimp library so that models of different types can be loaded, including .3ds, .obj, and .max. This converts the model to an intermediate XML like format, which is then parsed by my own code so that it can work in my game engine. The main benefit to using Assimp is to support a large range of different object files. The constructor for the model class takes in a 3d model file and a vector of different texture types. Right now the model loading can onlytake in models composed of one mesh, and that contain one of each type of texture. It works in the same way that the cube class below works, so for instance if I wanted to load in the sunflower object file I would use the constructor as such,
 
 ```cpp
 sunflower = new Model(
