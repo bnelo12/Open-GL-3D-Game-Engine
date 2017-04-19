@@ -15,12 +15,14 @@ SDL_Window* App::mainWindow;
 SDL_GLContext App::mainContext;
 
 //World Objects
-FPSCamera App::fpsCamera = FPSCamera(glm::vec3(0,-1,-5), 0, 0);
+FPSCamera App::fpsCamera = FPSCamera(glm::vec3(-5,-2,-5), 0, 0);
+Light* light1;
+Tile* grassField;
 Cube* cube1;
 Cube* cube2;
-Light* light1;
-Plane* plane1;
 Model* sunflower;
+Model* barn;
+vector<Model> sunflowers;
 
 void App::setOpenGLAttributes() {
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
@@ -36,37 +38,50 @@ void App::loadShaders() {
 }
 
 void App::load() {
+    // Set Camera
     fpsCamera.setWindow(mainWindow);
     fpsCamera.setAspectRatio(1280.f/720.f);
+    
+    // Set Lights
+    light1 = new Light(vec3(100,100,0), vec3(1,1,1), vec3(1.f,1.f,1.f), vec3(.2,.2,.2));
+    
+    // Load Primitives
+    grassField = new Tile(vector<Texture*> {new Texture("grass_diffuse.jpg", MAP::DIFFUSE)}, 5);
+    
+    //Load Models
+    sunflower = new Model( (GLchar*)"sunflower/sunflower.obj",
+                           vector<Texture*> {
+                               new Texture("sunflower/sunflower_diffuse.png", MAP::DIFFUSE)
+                           });
+    barn = new Model( (GLchar*)"medieval_barn/medieval_barn.obj",
+                          vector<Texture*> {
+                              new Texture("medieval_barn/medieval_barn.png", MAP::DIFFUSE)
+                          });
+    
+    // Set Transformations
+    barn->setRotation(vec3(0, radians(-90.f), 0));
+    barn->setTranslation(vec3(5,1.30,-4));
+    barn->setScale(2);
+    sunflower->setScale(.1);
+    sunflower->setTranslation(vec3(3.4,-.1,-1.4));
+    sunflower->setRotation(vec3(0, radians(-40.f), 0));
     cube1 = new Cube(vector<Texture*>{new Texture("wooden-crate.jpg", MAP::DIFFUSE)});
-    cube1->setTranslation(vec3(0,.5,0));
+    cube1->setTranslation(vec3(2,.5,-1.2));
     cube1->setScale(.5);
     cube2 = new Cube(vector<Texture*>{new Texture("wooden-crate.jpg", MAP::DIFFUSE)});
-    cube2->setTranslation(vec3(0,1.5,.1));
+    cube2->setTranslation(vec3(2,1.5,-1.2));
     cube2->setRotation(vec3(0,radians(-12.5f), 0));
     cube2->setScale(.5);
-    light1 = new Light(vec3(8,9,0), vec3(1,1,1), vec3(1.f,1.f,1.f), vec3(.2,.2,.2));
-    plane1 = new Plane(Material::GREEN_RUBBER);
-    plane1->setTranslation(vec3(0,0,0));
-    plane1->setScale(100);
-    sunflower = new Model((GLchar*)"sunflower/sunflower.obj", vector<Texture*> {new Texture("sunflower/sunflower_diffuse.png", MAP::DIFFUSE)});
-    sunflower->setScale(.1);
-    sunflower->setTranslation(vec3(0,-.1,1.5));
-    sunflower->setRotation(vec3(0, radians(30.f), 0));
 }
 
 void App::render() {
-    glClearColor(0, 0, 0, 1);
+    glClearColor(0, .75, 1, 1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     light1->render();
     cube1->render();
     cube2->render();
-    plane1->render();
-    sunflower->setTranslation(vec3(0,-.1,1.5));
-    sunflower->setRotation(vec3(0, radians(30.f), 0));
-    sunflower->render();
-    sunflower->setTranslation(vec3(0,-.1,-1.5));
-    sunflower->setRotation(vec3(0, radians(-30.f), 0));
+    grassField->render();
+    barn->render();
     sunflower->render();
     SDL_GL_SwapWindow(mainWindow);
 }
@@ -100,6 +115,8 @@ bool App::init() {
     glDepthFunc(GL_LESS);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glEnable(GL_BLEND);
+    glAlphaFunc(GL_GREATER, 0.5);
+    glEnable(GL_ALPHA_TEST);
     
     std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
     std::cout << "GLSL version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;

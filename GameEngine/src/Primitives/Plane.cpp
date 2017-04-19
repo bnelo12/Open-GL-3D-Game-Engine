@@ -13,6 +13,24 @@ Plane::Plane(Material material) {
     init();
 }
 
+Plane::Plane(std::vector<Texture*> lightingMaps) {
+    this->hasTextureMaps = true;
+    for (auto &tex : lightingMaps) {
+        switch (tex->type) {
+            case MAP::DIFFUSE:
+                this->diffuseMap = tex;
+                break;
+            case MAP::SPECULAR:
+                this->specularMap = tex;
+                break;
+            case MAP::EMISSION:
+                this->emissionMap = tex;
+                break;
+        }
+    }
+    init();
+}
+
 void Plane::init() {
     vertexData = {
     //  verticies           UVS             Normal
