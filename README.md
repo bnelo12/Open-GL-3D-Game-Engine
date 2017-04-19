@@ -10,6 +10,20 @@ GLM
 
 GLEW
 
+## Update 4
+### Tiling the Plane
+A new plane primitive has been introduced called a tile. A tile gives the ability to have a sprawling, repeating-texture, plane. I do this by adding more verticies to the vertex array, to define where the texture should repeat. The constructor for a tile is as such, taking in a vector of textures and a radius, defining how many times the texture should repeat,
+
+```cpp
+grassField = new Tile(
+    vector<Texture*> {
+        new Texture("grass_diffuse.jpg", MAP::DIFFUSE)
+    }, 5);
+```
+I've also added some new models. Here are the results so far,
+<img src="Examples/update4.png"/>
+The super class for the tile is the primitive class, so all the scale, rotate, and translation methods will work and the tile uses the same shader.
+
 ## Update 3
 ### Model Loading
 Model loading is now a feature. I am using th Assimp library so that models of different types can be loaded, including .3ds, .obj, and .max. This converts the model to an intermediate XML like format, which is then parsed by my own code so that it can work in my game engine. The main benefit to using Assimp is to support a large range of different object files. The constructor for the model class takes in a 3d model file and a vector of different texture types. Right now the model loading can onlytake in models composed of one mesh, and that contain one of each type of texture. It works in the same way that the cube class below works, so for instance if I wanted to load in the sunflower object file I would use the constructor as such,
