@@ -42,9 +42,11 @@
 		B5ABC4F71E9A7CE70044E0BC /* container.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ABC4F11E9A7CDD0044E0BC /* container.png */; };
 		B5ABC4F81E9A7CE70044E0BC /* cube_diffuse.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ABC4F21E9A7CDD0044E0BC /* cube_diffuse.jpg */; };
 		B5ABC4F91E9A7CE70044E0BC /* cube_emission.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ABC4F31E9A7CDD0044E0BC /* cube_emission.png */; };
+		B5C355A91EA696FA0053F07D /* grass_diffuse.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5C355A81EA696F40053F07D /* grass_diffuse.jpg */; };
 		B5DC27E91E89365D0013C779 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5DC27E71E89365D0013C779 /* Cube.cpp */; };
 		B5E0733E1E96A626003B2AFD /* phongF.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5E0733C1E96A5EF003B2AFD /* phongF.glsl */; };
 		B5E0733F1E96A626003B2AFD /* phongV.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5E0733D1E96A5EF003B2AFD /* phongV.glsl */; };
+		B5FC3BAC1EA406DD00654FDA /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5FC3BAA1EA406DD00654FDA /* Tile.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				B5C355A91EA696FA0053F07D /* grass_diffuse.jpg in CopyFiles */,
 				B5ABC4F41E9A7CE70044E0BC /* container_emission.jpg in CopyFiles */,
 				B5ABC4F51E9A7CE70044E0BC /* container_specular_color.png in CopyFiles */,
 				B5ABC4F61E9A7CE70044E0BC /* container_specular.png in CopyFiles */,
@@ -128,10 +131,13 @@
 		B5ABC4F11E9A7CDD0044E0BC /* container.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container.png; sourceTree = "<group>"; };
 		B5ABC4F21E9A7CDD0044E0BC /* cube_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_diffuse.jpg; sourceTree = "<group>"; };
 		B5ABC4F31E9A7CDD0044E0BC /* cube_emission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube_emission.png; sourceTree = "<group>"; };
+		B5C355A81EA696F40053F07D /* grass_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass_diffuse.jpg; sourceTree = "<group>"; };
 		B5DC27E71E89365D0013C779 /* Cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
 		B5DC27E81E89365D0013C779 /* Cube.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cube.hpp; sourceTree = "<group>"; };
 		B5E0733C1E96A5EF003B2AFD /* phongF.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = phongF.glsl; sourceTree = "<group>"; };
 		B5E0733D1E96A5EF003B2AFD /* phongV.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = phongV.glsl; sourceTree = "<group>"; };
+		B5FC3BAA1EA406DD00654FDA /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
+		B5FC3BAB1EA406DD00654FDA /* Tile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tile.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				B5ABC4EE1E9A7CDD0044E0BC /* container_emission.jpg */,
+				B5C355A81EA696F40053F07D /* grass_diffuse.jpg */,
 				B5ABC4EF1E9A7CDD0044E0BC /* container_specular_color.png */,
 				B5ABC4F01E9A7CDD0044E0BC /* container_specular.png */,
 				B5ABC4F11E9A7CDD0044E0BC /* container.png */,
@@ -316,7 +323,7 @@
 				B53423DD1E9EA6870028BFDF /* Model.cpp */,
 				B53423DE1E9EA6870028BFDF /* Model.hpp */,
 			);
-			name = Mesh;
+			path = Mesh;
 			sourceTree = "<group>";
 		};
 		B5ABC4E91E9A7C860044E0BC /* lightingMap */ = {
@@ -346,6 +353,8 @@
 				B59731451E8F1F4900FE2B6D /* Sphere.hpp */,
 				B597315E1E92A7E300FE2B6D /* Plane.cpp */,
 				B597315F1E92A7E300FE2B6D /* Plane.hpp */,
+				B5FC3BAA1EA406DD00654FDA /* Tile.cpp */,
+				B5FC3BAB1EA406DD00654FDA /* Tile.hpp */,
 				B59731471E8F1F6200FE2B6D /* Primitive.cpp */,
 				B59731481E8F1F6200FE2B6D /* Primitive.hpp */,
 			);
@@ -416,6 +425,7 @@
 				B52E517A1E7B734A004538AD /* Program.cpp in Sources */,
 				B59731461E8F1F4900FE2B6D /* Sphere.cpp in Sources */,
 				B59731601E92A7E300FE2B6D /* Plane.cpp in Sources */,
+				B5FC3BAC1EA406DD00654FDA /* Tile.cpp in Sources */,
 				B52E51721E7B4376004538AD /* Shader.cpp in Sources */,
 				B52E516D1E7B42A7004538AD /* main.cpp in Sources */,
 				B5932B6C1E9D378E00F69FAC /* Mesh.cpp in Sources */,

@@ -28,6 +28,7 @@
 #include "Sphere.hpp"
 #include "Light.hpp"
 #include "Plane.hpp"
+#include "Tile.hpp"
 #include "Model.hpp"
 
 using namespace glm;

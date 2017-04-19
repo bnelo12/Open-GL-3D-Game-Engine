@@ -14,6 +14,7 @@
 class Plane: public Primitive {
 public:
     Plane(Material material);
+    Plane(std::vector<Texture*> lightingMaps);
 private:
     void init();
 };

@@ -61,8 +61,6 @@ protected:
     
     bool hasTexture = false;
     bool hasTextureMaps = false;
-    
-private:
     bool hasDiffuseMap = false;
     bool hasSpecularMap = false;
     bool hasEmissionMap = false;
