@@ -6,19 +6,14 @@
 //  Copyright © 2017 Elo Software. All rights reserved.
 //
 
-#include <GL/glew.h>
-
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
-
 #include "Texture.hpp"
 
 Texture::Texture(const char* filename, MAP type) {
     SDL_Surface* textureImage;
     textureImage = IMG_Load(filename);
-    glGenTextures(1, &textureid);
+    glGenTextures(1, &textureID);
     
-    glBindTexture(GL_TEXTURE_2D, textureid);
+    glBindTexture(GL_TEXTURE_2D, textureID);
     int Mode = GL_RGB;
     if(textureImage->format->BytesPerPixel == 4) {
         Mode = GL_RGBA;

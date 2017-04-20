@@ -56,6 +56,7 @@ private:
     mat4 projectionMat = perspective(FOV, aspectRatio, nearPlane, farPlane);
     mat4 orientation;
     mat4 calculate();
+    mat4 calculateSky();
     vec3 forward();
     vec3 right();
     vec3 offset;

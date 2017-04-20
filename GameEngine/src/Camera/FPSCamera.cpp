@@ -69,6 +69,11 @@ void FPSCamera::updateCamera() {
         cameraPosUniform = glGetUniformLocation(Program::LIGHTING_MAP, "cameraPos");
         glUniform3fv(cameraPosUniform, 1, glm::value_ptr(-this->offset));
         glUseProgram(0);
+        
+        glUseProgram(Program::SKY_BOX);
+        cameraUniform = glGetUniformLocation(Program::SKY_BOX, "camera");
+        glUniformMatrix4fv(cameraUniform, 1, false, glm::value_ptr(calculateSky()));
+        glUseProgram(0);
     }
 }
 
@@ -90,6 +95,16 @@ mat4 FPSCamera::calculate() {
     out = projectionMat*orientation*translation;
     return out;
 }
+
+mat4 FPSCamera::calculateSky() {
+    mat4 out;
+    orientation = rotate(mat4(), radians(xRot), vec3(1,0,0));
+    orientation = rotate(orientation, radians(zRot), vec3(0,1,0));
+    out = projectionMat*orientation;
+    return out;
+}
+
+
 
 void FPSCamera::lockCamera(bool lock) {
     SDL_ShowCursor(SDL_ENABLE);

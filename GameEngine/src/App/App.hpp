@@ -30,6 +30,8 @@
 #include "Plane.hpp"
 #include "Tile.hpp"
 #include "Model.hpp"
+#include "CubeMap.hpp"
+#include "SkyBox.hpp"
 
 using namespace glm;
 

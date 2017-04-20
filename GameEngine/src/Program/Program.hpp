@@ -29,6 +29,7 @@ public:
     static GLuint FLAT;
     static GLuint PHONG;
     static GLuint LIGHTING_MAP;
+    static GLuint SKY_BOX;
     
 private:
     std::vector<Shader*> shaders;

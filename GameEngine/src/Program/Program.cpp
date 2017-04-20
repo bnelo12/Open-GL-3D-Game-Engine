@@ -12,6 +12,7 @@
 GLuint Program::FLAT;
 GLuint Program::PHONG;
 GLuint Program::LIGHTING_MAP;
+GLuint Program::SKY_BOX;
 
 Program::Program() {
 }
@@ -33,6 +34,10 @@ void Program::init() {
     Shader lightingMapV = Shader("lightingMapV.glsl", GL_VERTEX_SHADER);
     Shader lightingMapF = Shader("lightingMapF.glsl", GL_FRAGMENT_SHADER);
     Program::LIGHTING_MAP = (new Program({&lightingMapF, &lightingMapV}))->programid;
+    
+    Shader skyBoxV = Shader("SkyBoxV.glsl", GL_VERTEX_SHADER);
+    Shader skyBoxF = Shader("SkyBoxF.glsl", GL_FRAGMENT_SHADER);
+    Program::SKY_BOX = (new Program({&skyBoxF, &skyBoxV}))->programid;
 }
 
 void Program::addShader(Shader *shader) {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B506E09D1EA7A9670026FDC5 /* SkyBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B506E09B1EA7A9670026FDC5 /* SkyBox.cpp */; };
+		B506E0A11EA7C37B0026FDC5 /* SkyBoxV.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = B506E09F1EA7AFE70026FDC5 /* SkyBoxV.glsl */; };
+		B506E0A21EA7C37B0026FDC5 /* SkyBoxF.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = B506E0A01EA7AFF30026FDC5 /* SkyBoxF.glsl */; };
 		B508781D1E93D00D00720C7A /* DirectionalLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B508781B1E93D00D00720C7A /* DirectionalLight.cpp */; };
 		B50878211E93D24F00720C7A /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B508781F1E93D24F00720C7A /* Material.cpp */; };
 		B51BC6801E7C02E500ACDA09 /* warning_sign.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = B51BC67F1E7C02D600ACDA09 /* warning_sign.png */; };
@@ -46,6 +49,7 @@
 		B5DC27E91E89365D0013C779 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5DC27E71E89365D0013C779 /* Cube.cpp */; };
 		B5E0733E1E96A626003B2AFD /* phongF.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5E0733C1E96A5EF003B2AFD /* phongF.glsl */; };
 		B5E0733F1E96A626003B2AFD /* phongV.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5E0733D1E96A5EF003B2AFD /* phongV.glsl */; };
+		B5F26ECF1EA77E8800EB861E /* CubeMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5F26ECD1EA77E8800EB861E /* CubeMap.cpp */; };
 		B5FC3BAC1EA406DD00654FDA /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5FC3BAA1EA406DD00654FDA /* Tile.cpp */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				B506E0A11EA7C37B0026FDC5 /* SkyBoxV.glsl in CopyFiles */,
+				B506E0A21EA7C37B0026FDC5 /* SkyBoxF.glsl in CopyFiles */,
 				B5C355A91EA696FA0053F07D /* grass_diffuse.jpg in CopyFiles */,
 				B5ABC4F41E9A7CE70044E0BC /* container_emission.jpg in CopyFiles */,
 				B5ABC4F51E9A7CE70044E0BC /* container_specular_color.png in CopyFiles */,
@@ -78,6 +84,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B506E09B1EA7A9670026FDC5 /* SkyBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SkyBox.cpp; sourceTree = "<group>"; };
+		B506E09C1EA7A9670026FDC5 /* SkyBox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SkyBox.hpp; sourceTree = "<group>"; };
+		B506E09F1EA7AFE70026FDC5 /* SkyBoxV.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkyBoxV.glsl; sourceTree = "<group>"; };
+		B506E0A01EA7AFF30026FDC5 /* SkyBoxF.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkyBoxF.glsl; sourceTree = "<group>"; };
 		B508781B1E93D00D00720C7A /* DirectionalLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectionalLight.cpp; sourceTree = "<group>"; };
 		B508781C1E93D00D00720C7A /* DirectionalLight.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DirectionalLight.hpp; sourceTree = "<group>"; };
 		B508781F1E93D24F00720C7A /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Material.cpp; sourceTree = "<group>"; };
@@ -136,6 +146,14 @@
 		B5DC27E81E89365D0013C779 /* Cube.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cube.hpp; sourceTree = "<group>"; };
 		B5E0733C1E96A5EF003B2AFD /* phongF.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = phongF.glsl; sourceTree = "<group>"; };
 		B5E0733D1E96A5EF003B2AFD /* phongV.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = phongV.glsl; sourceTree = "<group>"; };
+		B5E507581EA9461600F28F7F /* miramar_bk.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = miramar_bk.tga; sourceTree = "<group>"; };
+		B5E507591EA9461600F28F7F /* miramar_dn.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = miramar_dn.tga; sourceTree = "<group>"; };
+		B5E5075A1EA9461600F28F7F /* miramar_ft.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = miramar_ft.tga; sourceTree = "<group>"; };
+		B5E5075B1EA9461600F28F7F /* miramar_lf.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = miramar_lf.tga; sourceTree = "<group>"; };
+		B5E5075C1EA9461600F28F7F /* miramar_rt.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = miramar_rt.tga; sourceTree = "<group>"; };
+		B5E5075D1EA9461600F28F7F /* miramar_up.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = miramar_up.tga; sourceTree = "<group>"; };
+		B5F26ECD1EA77E8800EB861E /* CubeMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubeMap.cpp; sourceTree = "<group>"; };
+		B5F26ECE1EA77E8800EB861E /* CubeMap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CubeMap.hpp; sourceTree = "<group>"; };
 		B5FC3BAA1EA406DD00654FDA /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
 		B5FC3BAB1EA406DD00654FDA /* Tile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tile.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +177,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B506E09A1EA7A69F0026FDC5 /* cubemaps */ = {
+			isa = PBXGroup;
+			children = (
+				B5E507571EA9461600F28F7F /* miramar */,
+			);
+			path = cubemaps;
+			sourceTree = "<group>";
+		};
+		B506E09E1EA7AFCC0026FDC5 /* skybox */ = {
+			isa = PBXGroup;
+			children = (
+				B506E09F1EA7AFE70026FDC5 /* SkyBoxV.glsl */,
+				B506E0A01EA7AFF30026FDC5 /* SkyBoxF.glsl */,
+			);
+			name = skybox;
+			sourceTree = "<group>";
+		};
 		B508781E1E93D22F00720C7A /* Material */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +206,7 @@
 		B51BC67E1E7C01B700ACDA09 /* textures */ = {
 			isa = PBXGroup;
 			children = (
+				B506E09A1EA7A69F0026FDC5 /* cubemaps */,
 				B5ABC4EE1E9A7CDD0044E0BC /* container_emission.jpg */,
 				B5C355A81EA696F40053F07D /* grass_diffuse.jpg */,
 				B5ABC4EF1E9A7CDD0044E0BC /* container_specular_color.png */,
@@ -190,6 +226,8 @@
 			children = (
 				B52E517D1E7B81F0004538AD /* Texture.cpp */,
 				B52E517E1E7B81F0004538AD /* Texture.hpp */,
+				B5F26ECD1EA77E8800EB861E /* CubeMap.cpp */,
+				B5F26ECE1EA77E8800EB861E /* CubeMap.hpp */,
 			);
 			path = Texture;
 			sourceTree = "<group>";
@@ -259,6 +297,7 @@
 		B52E516F1E7B4309004538AD /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				B506E09E1EA7AFCC0026FDC5 /* skybox */,
 				B5ABC4E91E9A7C860044E0BC /* lightingMap */,
 				B59731551E916EB500FE2B6D /* phong */,
 				B59731521E8FDAFD00FE2B6D /* flat */,
@@ -347,6 +386,8 @@
 		B5DC27E61E8936290013C779 /* Primitives */ = {
 			isa = PBXGroup;
 			children = (
+				B506E09B1EA7A9670026FDC5 /* SkyBox.cpp */,
+				B506E09C1EA7A9670026FDC5 /* SkyBox.hpp */,
 				B5DC27E71E89365D0013C779 /* Cube.cpp */,
 				B5DC27E81E89365D0013C779 /* Cube.hpp */,
 				B59731441E8F1F4900FE2B6D /* Sphere.cpp */,
@@ -359,6 +400,20 @@
 				B59731481E8F1F6200FE2B6D /* Primitive.hpp */,
 			);
 			path = Primitives;
+			sourceTree = "<group>";
+		};
+		B5E507571EA9461600F28F7F /* miramar */ = {
+			isa = PBXGroup;
+			children = (
+				B5E507581EA9461600F28F7F /* miramar_bk.tga */,
+				B5E507591EA9461600F28F7F /* miramar_dn.tga */,
+				B5E5075A1EA9461600F28F7F /* miramar_ft.tga */,
+				B5E5075B1EA9461600F28F7F /* miramar_lf.tga */,
+				B5E5075C1EA9461600F28F7F /* miramar_rt.tga */,
+				B5E5075D1EA9461600F28F7F /* miramar_up.tga */,
+			);
+			name = miramar;
+			path = textures/cubemaps/miramar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,10 +473,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F26ECF1EA77E8800EB861E /* CubeMap.cpp in Sources */,
 				B55FABDE1E96A816005DBFB3 /* Texture.cpp in Sources */,
 				B597315B1E917C7700FE2B6D /* Light.cpp in Sources */,
 				B50878211E93D24F00720C7A /* Material.cpp in Sources */,
 				B5DC27E91E89365D0013C779 /* Cube.cpp in Sources */,
+				B506E09D1EA7A9670026FDC5 /* SkyBox.cpp in Sources */,
 				B52E517A1E7B734A004538AD /* Program.cpp in Sources */,
 				B59731461E8F1F4900FE2B6D /* Sphere.cpp in Sources */,
 				B59731601E92A7E300FE2B6D /* Plane.cpp in Sources */,

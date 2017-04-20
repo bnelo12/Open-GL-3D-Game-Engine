@@ -22,6 +22,8 @@ Cube* cube1;
 Cube* cube2;
 Model* sunflower;
 Model* barn;
+CubeMap* map;
+SkyBox* env;
 vector<Model> sunflowers;
 
 void App::setOpenGLAttributes() {
@@ -38,15 +40,24 @@ void App::loadShaders() {
 }
 
 void App::load() {
+    map = new CubeMap(vector<GLchar*>{
+        (GLchar*)"miramar/miramar_ft.tga",
+        (GLchar*)"miramar/miramar_bk.tga",
+        (GLchar*)"miramar/miramar_up.tga",
+        (GLchar*)"miramar/miramar_dn.tga",
+        (GLchar*)"miramar/miramar_rt.tga",
+        (GLchar*)"miramar/miramar_lf.tga"});
+    env = new SkyBox(map);
+    
     // Set Camera
     fpsCamera.setWindow(mainWindow);
     fpsCamera.setAspectRatio(1280.f/720.f);
     
     // Set Lights
-    light1 = new Light(vec3(100,100,0), vec3(1,1,1), vec3(1.f,1.f,1.f), vec3(.2,.2,.2));
+    light1 = new Light(vec3(30,200,100), vec3(1,1,1), vec3(1.f,1.f,1.f), vec3(.2,.2,.2));
     
     // Load Primitives
-    grassField = new Tile(vector<Texture*> {new Texture("grass_diffuse.jpg", MAP::DIFFUSE)}, 5);
+    grassField = new Tile(vector<Texture*> {new Texture("grass_diffuse.jpg", MAP::DIFFUSE)}, 20);
     
     //Load Models
     sunflower = new Model( (GLchar*)"sunflower/sunflower.obj",
@@ -77,6 +88,7 @@ void App::load() {
 void App::render() {
     glClearColor(0, .75, 1, 1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    env->render();
     light1->render();
     cube1->render();
     cube2->render();

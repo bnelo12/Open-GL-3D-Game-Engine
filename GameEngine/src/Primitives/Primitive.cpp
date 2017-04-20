@@ -42,21 +42,21 @@ void Primitive::render() {
         if(diffuseMap) {
             this->hasDiffuseMap = true;
             glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_2D, diffuseMap->textureid);
+            glBindTexture(GL_TEXTURE_2D, diffuseMap->textureID);
             GLint mapUniform = glGetUniformLocation(prog, "diffuse_map");
             glUniform1i(mapUniform, 0);
         }
         if(specularMap) {
             this->hasSpecularMap = true;
             glActiveTexture(GL_TEXTURE1);
-            glBindTexture(GL_TEXTURE_2D, specularMap->textureid);
+            glBindTexture(GL_TEXTURE_2D, specularMap->textureID);
             GLint mapUniform = glGetUniformLocation(prog, "specular_map");
             glUniform1i(mapUniform, 1);
         }
         if(emissionMap) {
             this->hasEmissionMap = true;
             glActiveTexture(GL_TEXTURE2);
-            glBindTexture(GL_TEXTURE_2D, emissionMap->textureid);
+            glBindTexture(GL_TEXTURE_2D, emissionMap->textureID);
             GLint mapUniform = glGetUniformLocation(prog, "emission_map");
             glUniform1i(mapUniform, 2);
         }
@@ -71,7 +71,7 @@ void Primitive::render() {
     
         if (texture) {
             glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_2D, texture->textureid);
+            glBindTexture(GL_TEXTURE_2D, texture->textureID);
             GLint diffuseMapUniform = glGetUniformLocation(prog, "diffuse_map");
             glUniform1i(diffuseMapUniform, 0);
         }
