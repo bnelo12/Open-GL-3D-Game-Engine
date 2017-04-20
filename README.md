@@ -10,6 +10,27 @@ GLM
 
 GLEW
 
+## Update 5
+### Skyboxes and Cubemaps
+Skyboxes have been implemented and are simply a textured cube that surrounds the player. Depth testing for the skybox is disabled, so objects are always rendered in front of the skybox, as the skybox is a 1x1 cube that is not affected by the translation of the camera, giving the impression of sky in the distance. I have also added a new texture class called CubeMap, which allows you to load 6 different images corresponding to the 6 faces of the cube. A CubeMap is constructed by taking a vector of six images,
+```cpp
+map = new CubeMap(vector<GLchar*>{
+        (GLchar*)"miramar/miramar_ft.tga",
+        (GLchar*)"miramar/miramar_bk.tga",
+        (GLchar*)"miramar/miramar_up.tga",
+        (GLchar*)"miramar/miramar_dn.tga",
+        (GLchar*)"miramar/miramar_rt.tga",
+        (GLchar*)"miramar/miramar_lf.tga"
+});
+```
+And the sky box class is constructed by taking in a CubeMap as an argument,
+```cpp
+env = new SkyBox(map);
+```
+[A link to some high quality sky box textures can be found here.](http://www.custommapmakers.org/skyboxes.php)
+And here are the results,
+<img src="Examples/update5.png"/>
+
 ## Update 4
 ### Tiling the Plane
 A new plane primitive has been introduced called a tile. A tile gives the ability to have a sprawling, repeating-texture, plane. I do this by adding more verticies to the vertex array, to define where the texture should repeat. The constructor for a tile is as such, taking in a vector of textures and a radius, defining how many times the texture should repeat,
