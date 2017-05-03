@@ -44,7 +44,9 @@ protected:
     
     GLuint VBO = 0;
     GLuint VAO = 0;
+    GLuint EBO = 0;
     std::vector<GLfloat> vertexData;
+    std::vector<GLuint> indicies;
     Texture* texture = NULL;
     
     Texture* diffuseMap = NULL;

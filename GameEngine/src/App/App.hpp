@@ -32,6 +32,7 @@
 #include "Model.hpp"
 #include "CubeMap.hpp"
 #include "SkyBox.hpp"
+#include "Terrain.hpp"
 
 using namespace glm;
 
