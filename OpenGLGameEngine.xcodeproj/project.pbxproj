@@ -15,6 +15,8 @@
 		B51BC6801E7C02E500ACDA09 /* warning_sign.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = B51BC67F1E7C02D600ACDA09 /* warning_sign.png */; };
 		B51BC68A1E7C17F800ACDA09 /* libSDL2_image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B51BC6811E7C0FF000ACDA09 /* libSDL2_image.a */; };
 		B51BC68C1E7C209100ACDA09 /* hazard.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = B51BC68B1E7C204C00ACDA09 /* hazard.png */; };
+		B520D1521EB1367D00BB63FC /* Terrain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B520D1501EB1367D00BB63FC /* Terrain.cpp */; };
+		B520D1571EB154AA00BB63FC /* heightmap.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = B520D1561EB154A200BB63FC /* heightmap.jpg */; };
 		B52E51571E7B16B4004538AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52E51561E7B16B4004538AD /* QuartzCore.framework */; };
 		B52E51591E7B16C4004538AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52E51581E7B16C4004538AD /* Cocoa.framework */; };
 		B52E515B1E7B16D5004538AD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52E515A1E7B16D5004538AD /* IOKit.framework */; };
@@ -60,6 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				B520D1571EB154AA00BB63FC /* heightmap.jpg in CopyFiles */,
 				B506E0A11EA7C37B0026FDC5 /* SkyBoxV.glsl in CopyFiles */,
 				B506E0A21EA7C37B0026FDC5 /* SkyBoxF.glsl in CopyFiles */,
 				B5C355A91EA696FA0053F07D /* grass_diffuse.jpg in CopyFiles */,
@@ -97,6 +100,9 @@
 		B51BC6841E7C16B100ACDA09 /* libSDL2_image-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2_image-2.0.0.dylib"; path = "../../../../../usr/local/lib/libSDL2_image-2.0.0.dylib"; sourceTree = "<group>"; };
 		B51BC6861E7C16C100ACDA09 /* libSDL2_image.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libSDL2_image.la; path = ../../../../../usr/local/lib/libSDL2_image.la; sourceTree = "<group>"; };
 		B51BC68B1E7C204C00ACDA09 /* hazard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hazard.png; sourceTree = "<group>"; };
+		B520D1501EB1367D00BB63FC /* Terrain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Terrain.cpp; sourceTree = "<group>"; };
+		B520D1511EB1367D00BB63FC /* Terrain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Terrain.hpp; sourceTree = "<group>"; };
+		B520D1561EB154A200BB63FC /* heightmap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = heightmap.jpg; path = terrain/heightmap.jpg; sourceTree = "<group>"; };
 		B52E51491E7B11B6004538AD /* game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = game; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52E51561E7B16B4004538AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B52E51581E7B16C4004538AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -221,6 +227,23 @@
 			path = textures;
 			sourceTree = "<group>";
 		};
+		B520D14F1EB1365300BB63FC /* Terrain */ = {
+			isa = PBXGroup;
+			children = (
+				B520D1501EB1367D00BB63FC /* Terrain.cpp */,
+				B520D1511EB1367D00BB63FC /* Terrain.hpp */,
+			);
+			name = Terrain;
+			sourceTree = "<group>";
+		};
+		B520D1531EB1400600BB63FC /* terrain */ = {
+			isa = PBXGroup;
+			children = (
+				B520D1561EB154A200BB63FC /* heightmap.jpg */,
+			);
+			name = terrain;
+			sourceTree = "<group>";
+		};
 		B527C2981E7FF6C60068AE13 /* Texture */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +276,7 @@
 		B52E514B1E7B11B6004538AD /* GameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				B520D1531EB1400600BB63FC /* terrain */,
 				B51BC67E1E7C01B700ACDA09 /* textures */,
 				B52E516F1E7B4309004538AD /* shaders */,
 				B52E516E1E7B42AC004538AD /* src */,
@@ -290,6 +314,7 @@
 				B5DC27E41E8930960013C779 /* Camera */,
 				B597313F1E8F007400FE2B6D /* App */,
 				B52E517B1E7B81A8004538AD /* Program */,
+				B520D14F1EB1365300BB63FC /* Terrain */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -481,6 +506,7 @@
 				B506E09D1EA7A9670026FDC5 /* SkyBox.cpp in Sources */,
 				B52E517A1E7B734A004538AD /* Program.cpp in Sources */,
 				B59731461E8F1F4900FE2B6D /* Sphere.cpp in Sources */,
+				B520D1521EB1367D00BB63FC /* Terrain.cpp in Sources */,
 				B59731601E92A7E300FE2B6D /* Plane.cpp in Sources */,
 				B5FC3BAC1EA406DD00654FDA /* Tile.cpp in Sources */,
 				B52E51721E7B4376004538AD /* Shader.cpp in Sources */,

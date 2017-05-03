@@ -38,13 +38,13 @@ public:
     
 private:
     //player properties
-    float speed = 0.2f;
+    float speed = 1.2f;
     float sensitivity = .2;
     
     //camera properties
     float FOV = 50.0;
     float nearPlane = .1;
-    float farPlane = 200;
+    float farPlane = 500;
     float zRot = 0;
     float xRot = 0;
     

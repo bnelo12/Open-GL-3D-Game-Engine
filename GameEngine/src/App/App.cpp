@@ -25,6 +25,7 @@ Model* barn;
 CubeMap* map;
 SkyBox* env;
 vector<Model> sunflowers;
+Terrain* terrain;
 
 void App::setOpenGLAttributes() {
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
@@ -40,6 +41,7 @@ void App::loadShaders() {
 }
 
 void App::load() {
+    terrain = new Terrain((GLchar*) "heightmap.jpg", (GLchar*)"grass_diffuse.jpg");
     map = new CubeMap(vector<GLchar*>{
         (GLchar*)"miramar/miramar_ft.tga",
         (GLchar*)"miramar/miramar_bk.tga",
@@ -54,7 +56,7 @@ void App::load() {
     fpsCamera.setAspectRatio(1280.f/720.f);
     
     // Set Lights
-    light1 = new Light(vec3(30,200,100), vec3(1,1,1), vec3(1.f,1.f,1.f), vec3(.2,.2,.2));
+    light1 = new Light(vec3(100,500,500), vec3(1,1,1), vec3(1.f,1.f,1.f), vec3(.2,.2,.2));
     
     // Load Primitives
     grassField = new Tile(vector<Texture*> {new Texture("grass_diffuse.jpg", MAP::DIFFUSE)}, 20);
@@ -70,11 +72,11 @@ void App::load() {
                           });
     
     // Set Transformations
-    barn->setRotation(vec3(0, radians(-90.f), 0));
-    barn->setTranslation(vec3(5,1.30,-4));
+    barn->setRotation(vec3(0, radians(-60.f), 0));
+    barn->setTranslation(vec3(-25,10.9,-30));
     barn->setScale(2);
     sunflower->setScale(.1);
-    sunflower->setTranslation(vec3(3.4,-.1,-1.4));
+    sunflower->setTranslation(vec3(-24,10.2,-28));
     sunflower->setRotation(vec3(0, radians(-40.f), 0));
     cube1 = new Cube(vector<Texture*>{new Texture("wooden-crate.jpg", MAP::DIFFUSE)});
     cube1->setTranslation(vec3(2,.5,-1.2));
@@ -92,8 +94,8 @@ void App::render() {
     light1->render();
     cube1->render();
     cube2->render();
-    grassField->render();
     barn->render();
+    terrain->render();
     sunflower->render();
     SDL_GL_SwapWindow(mainWindow);
 }

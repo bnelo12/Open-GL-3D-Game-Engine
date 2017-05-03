@@ -10,6 +10,23 @@ GLM
 
 GLEW
 
+## Update 6
+### Generating Terrain from a Heightmap
+Before, the only terrain option was a tiled plane, but now you can have terrain with different heights. The idea is to import a picture, and have the intensity of each pixel of the texture be the height of the vertex. There were a couple of challenges to overcome with generating this terrain, especially with calculating the normals, but I found a suitable algorithm for doing this. I have also introduced element buffers with this terrain. With the large number of vetices in the terrain, it became far more efficient to define each face, instead of re-adding the same vertex eight times over and then drawing it.
+
+Loading in terrain into the game engine is easy, just specify a heightmap and the texture you want to use on the terrain.
+```cpp
+terrain = new Terrain((GLchar*) "heightmap.jpg", (GLchar*)"grass_diffuse.jpg");
+```
+And since the terrain in a sub class of primitive, to draw the terrain just use the `render()` method. For this terrain I used this heightmap:
+
+<img src="GameEngine/terrain/heightmap.jpg"/>
+
+With this result,
+
+<img src="Examples/update6.png"/>
+
+
 ## Update 5
 ### Skyboxes and Cubemaps
 Skyboxes have been implemented and are simply a textured cube that surrounds the player. Depth testing for the skybox is disabled, so objects are always rendered in front of the skybox, as the skybox is a 1x1 cube that is not affected by the translation of the camera, giving the impression of sky in the distance. I have also added a new texture class called CubeMap, which allows you to load 6 different images corresponding to the 6 faces of the cube. A CubeMap is constructed by taking a vector of six images,
