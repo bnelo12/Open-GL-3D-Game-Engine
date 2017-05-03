@@ -1,15 +1,6 @@
 # OpenGL 3D Game Engine
 A 3D game engine created with OpenGL and regularly updated.
 
-## Dependencies
-SDL2
-
-SDL2_Image
-
-GLM
-
-GLEW
-
 ## Update 6
 ### Generating Terrain from a Heightmap
 Before, the only terrain option was a tiled plane, but now you can have terrain with different heights. The idea is to import a picture, and have the intensity of each pixel of the texture be the height of the vertex. There were a couple of challenges to overcome with generating this terrain, especially with calculating the normals, but I found a suitable algorithm for doing this. I have also introduced element buffers with this terrain. With the large number of vetices in the terrain, it became far more efficient to define each face, instead of re-adding the same vertex eight times over and then drawing it.
@@ -90,3 +81,14 @@ The game engine now has the ability to have different lighting maps including di
 I am documententing my progress to create a modern OpenGL game engine. Before deciding to post my results on GitHub, I had created a simple Phong shader for the lighting model, and the ability to apply different shaders to different objects. I have three primitives in the primitive class: cube, sphere, and plane. I will attach a screen shot of my progress with each merge to the master branch.
 
 <img src="Examples/update1.png"/>
+
+## Dependencies
+SDL2
+
+SDL2_Image
+
+GLM
+
+GLEW
+
+Assimp
