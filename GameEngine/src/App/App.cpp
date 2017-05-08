@@ -78,7 +78,7 @@ void App::load() {
     sunflower->setScale(.1);
     sunflower->setTranslation(vec3(-24,10.2,-28));
     sunflower->setRotation(vec3(0, radians(-40.f), 0));
-    cube1 = new Cube(vector<Texture*>{new Texture("wooden-crate.jpg", MAP::DIFFUSE)});
+    cube1 = new Cube(vec4(0,0,0,1));
     cube1->setTranslation(vec3(2,.5,-1.2));
     cube1->setScale(.5);
     cube2 = new Cube(vector<Texture*>{new Texture("wooden-crate.jpg", MAP::DIFFUSE)});

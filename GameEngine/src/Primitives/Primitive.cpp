@@ -9,6 +9,8 @@
 #include "Primitive.hpp"
 
 void Primitive::init() {
+    box = new BoundingBox(vertexData);
+    
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
     
@@ -116,12 +118,15 @@ void Primitive::render() {
     glBindVertexArray(0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glUseProgram(0);
+    
+    box->render();
 }
 
 void Primitive::update() {
     translationMatrix = glm::translate(mat4(), translation);
     rotationMatrix = toMat4(rotation);
     scaleMatrix = glm::scale(mat4(), scale*vec3(1));
+    box->model = translationMatrix*rotationMatrix*scaleMatrix;
 }
 
 void Primitive::setTranslation(vec3 translation) {

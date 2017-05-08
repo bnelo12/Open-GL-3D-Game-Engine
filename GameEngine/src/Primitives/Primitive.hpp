@@ -18,6 +18,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/quaternion.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include "BoundingBox.hpp"
 
 using namespace glm;
 
@@ -66,6 +67,8 @@ protected:
     bool hasDiffuseMap = false;
     bool hasSpecularMap = false;
     bool hasEmissionMap = false;
+    
+    BoundingBox* box;
 };
 
 #endif /* Primitive_hpp */
